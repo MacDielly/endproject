@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Potins</h1>
+
+<div id="potins">
+  <% @potins.each do |potin| %>
+    <%= render potin %>
+    <p>
+      <%= link_to "Show this potin", potin %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New potin", new_potin_path %>

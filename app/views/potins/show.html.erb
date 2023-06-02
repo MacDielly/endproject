@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @potin %>
+
+<div>
+  <%= link_to "Edit this potin", edit_potin_path(@potin) %> |
+  <%= link_to "Back to potins", potins_path %>
+
+  <%= button_to "Destroy this potin", @potin, method: :delete %>
+</div>

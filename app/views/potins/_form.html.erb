@@ -1,0 +1,32 @@
+<%= form_with(model: potin) do |form| %>
+  <% if potin.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(potin.errors.count, "error") %> prohibited this potin from being saved:</h2>
+
+      <ul>
+        <% potin.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :titre, style: "display: block" %>
+    <%= form.text_field :titre %>
+  </div>
+
+  <div>
+    <%= form.label :contenu, style: "display: block" %>
+    <%= form.text_area :contenu %>
+  </div>
+
+  <div>
+    <%= form.label :auteur, style: "display: block" %>
+    <%= form.text_field :auteur %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

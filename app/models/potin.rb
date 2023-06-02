@@ -1,0 +1,2 @@
+class Potin < ApplicationRecord
+end
